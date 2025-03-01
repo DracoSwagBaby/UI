@@ -1,3 +1,15 @@
+local allowedUsers = {
+    [2003022360] = true,
+    [4909330189] = true
+}
+
+local player = game:GetService("Players").LocalPlayer
+
+if not allowedUsers[player.UserId] then
+    game:GetService("Players"):GetPlayers()[1]:Kick("🛡️ Secured By Synth X 🛡️")
+end
+
+
 local DTC;
                 for Index, Value in next, getgc(true) do
                     if type(Value) == "table" then
